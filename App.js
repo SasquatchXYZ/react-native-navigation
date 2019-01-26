@@ -9,9 +9,11 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Button, Text, View} from 'react-native';
-import {createStackNavigator, createAppContainer, createBottomTabNavigator} from 'react-navigation';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
+import HomeScreen from './screens/HomeScreen';
+import DetailsScreen from './screens/DetailsScreen';
 
-class HomeScreen extends Component {
+/*class HomeScreen extends Component {
   static navigationOptions = {
     title: 'Home'
   };
@@ -32,9 +34,9 @@ class HomeScreen extends Component {
       </View>
     )
   }
-}
+}*/
 
-class DetailsScreen extends Component {
+/*class DetailsScreen extends Component {
   static navigationOptions = ({navigation}) => {
     return {
       title: navigation.getParam('otherParam', 'A Nested Details Screen')
@@ -74,7 +76,7 @@ class DetailsScreen extends Component {
       </View>
     )
   }
-}
+}*/
 
 const AppNavigator = createStackNavigator({
     Home: {
