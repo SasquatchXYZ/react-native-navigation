@@ -9,7 +9,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Button, Text, View} from 'react-native';
-import {createStackNavigator, createAppContainer} from 'react-navigation';
+import {createStackNavigator, createAppContainer, createBottomTabNavigator} from 'react-navigation';
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -82,9 +82,37 @@ const AppNavigator = createStackNavigator({
     },
     Details: DetailsScreen
   }, {
-    initialRouteName: 'Home'
+    initialRouteName: 'Home',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#F4511E'
+      },
+      headerTintColor: '#FFFFFF',
+      headerTitleStyle: {
+        fontWeight: 'bold'
+      }
+    }
   }
 );
+
+/*const Home = createStackNavigator(
+  {
+    Feed: ExampleScreen,
+    Profile: ExampleScreen
+  }, {
+    defaultNavigationOptions: {
+      headerTintColor: '#FFFFFF',
+      headerStyle: {
+        backgroundColor: '#000000'
+      }
+    },
+    navigationOptions: {
+      tabBarLabel: 'Home!'
+    }
+  }
+);
+
+const Tabs = createBottomTabNavigator({Home});*/
 
 const AppContainer = createAppContainer(AppNavigator);
 
